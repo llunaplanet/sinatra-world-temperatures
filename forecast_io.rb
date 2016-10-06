@@ -30,25 +30,3 @@ class ForecastIO
     end
 
 end
-
-if __FILE__ == $0
-
-    api_key = "99f08919415972d78b757e13a6fc1345"
-    location_lat = "45.429522"
-    location_long = "-75.689613"
-
-    forecastIO = ForecastIO.new(api_key)
-    forecast = forecastIO.get_forecast(location_lat, location_long)
-    forecast_current_temp = forecast["currently"]["temperature"]
-    forecast_hour_summary = forecast["minutely"]["summary"]
-    puts "Current temperature: #{forecast_current_temp}"
-    puts "Text summary: #{forecast_hour_summary}"
-
-    forecastIO.units="us";
-    forecast = forecastIO.get_forecast(location_lat, location_long)
-    forecast_current_temp = forecast["currently"]["temperature"]
-    forecast_hour_summary = forecast["minutely"]["summary"]
-    puts "Current temperature: #{forecast_current_temp}"
-    puts "Text summary: #{forecast_hour_summary}"
-
-end

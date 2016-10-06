@@ -26,7 +26,7 @@ get '/:address' do
   end
 
   # Get forecast
-  forecastIO = ForecastIO.new("99f08919415972d78b757e13a6fc1345", country_units)
+  forecastIO = ForecastIO.new(ENV['FORECASTIO_KEY'], country_units)
   forecast = forecastIO.get_forecast(location["lat"], location["lng"])
 
   @forecast_current_temp = forecast["currently"]["temperature"].round

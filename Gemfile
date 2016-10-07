@@ -10,6 +10,7 @@ gem 'sinatra-activerecord'
 
 gem 'thin'
 gem 'tux'
+gem 'dotenv'
 
 # These gems are only installed when run as `bundle install --without production`
 group :development, :test do

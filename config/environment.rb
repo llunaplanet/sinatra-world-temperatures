@@ -3,6 +3,10 @@ require 'bundler/setup'
 
 require 'active_support/all'
 
+#Load env variables
+require 'dotenv'
+Dotenv.load
+
 # Load Sinatra Framework (with AR)
 require 'sinatra'
 require 'sinatra/activerecord'

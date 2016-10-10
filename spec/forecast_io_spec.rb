@@ -1,4 +1,4 @@
-require './forecast_io'
+require './lib/forecast_io'
 
 describe ForecastIO do
     it "Should respond by default with SI units" do

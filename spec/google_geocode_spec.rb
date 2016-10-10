@@ -1,4 +1,4 @@
-require './google_geocode'
+require './lib/google_geocode'
 
 describe GoogleGeocodeAPI do
 

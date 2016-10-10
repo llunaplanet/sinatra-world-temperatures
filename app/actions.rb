@@ -4,8 +4,8 @@ get '/' do
   erb :index
 end
 
-require_relative '../google_geocode'
-require_relative '../forecast_io'
+require_relative '../lib/google_geocode'
+require_relative '../lib/forecast_io'
 
 get '/:address' do
 

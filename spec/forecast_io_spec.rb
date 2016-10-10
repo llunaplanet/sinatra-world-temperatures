@@ -9,7 +9,6 @@ describe ForecastIO do
 
         forecastIO = ForecastIO.new(api_key)
         forecast = forecastIO.get_forecast(location_lat, location_long)
-        # forecast.each{|k, v| puts k}
         expect(forecast["flags"]['units']).to eq "si"
     end
 
@@ -21,7 +20,6 @@ describe ForecastIO do
 
         forecastIO = ForecastIO.new(api_key,"us")
         forecast = forecastIO.get_forecast(location_lat, location_long)
-        # forecast.each{|k, v| puts k}
         expect(forecast["flags"]['units']).to eq "us"
     end
 end

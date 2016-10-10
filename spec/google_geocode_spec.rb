@@ -20,6 +20,17 @@ describe GoogleGeocodeAPI do
 
     end
 
+    it "Should return the formatted_address for Valencia" do
+
+        valencia_location = Hash["lat" => 39.4699075, "lng" => -0.3762881]
+
+        googleGeocodeAPI = GoogleGeocodeAPI.new()
+        location = googleGeocodeAPI.address_to_location("valencia");
+        formatted_address = googleGeocodeAPI.get_formatted_addres()
+        expect(formatted_address).to eq "Valencia, Spain"
+
+    end
+
     it "Should respond with correct country code for Valencia" do
 
         googleGeocodeAPI = GoogleGeocodeAPI.new()

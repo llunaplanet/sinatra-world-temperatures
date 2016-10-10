@@ -62,4 +62,8 @@ class GoogleGeocodeAPI
         return @country_code
 
     end
+
+    def get_formatted_addres
+      return @geocode_result.key?("formatted_address") ? @geocode_result['formatted_address'] : nil
+    end
 end
